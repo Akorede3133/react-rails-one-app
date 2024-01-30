@@ -1,8 +1,6 @@
-class Api::V1::GreetingsController < ApplicationController do
-  def show
-    def show
-      @greeting = Greeting.all.sample
-      render json: @greeting, only: :message
-    end
+class Api::V1::GreetingsController < ApplicationController 
+  def index
+    @greeting = Greeting.all.sample
+    render json: @greeting, only: :message
   end
 end
