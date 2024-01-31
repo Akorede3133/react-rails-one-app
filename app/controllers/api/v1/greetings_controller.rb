@@ -1,4 +1,4 @@
-class Api::V1::GreetingsController < ApplicationController 
+class Api::V1::GreetingsController < ApplicationController
   def index
     @greeting = Greeting.all.sample
     render json: @greeting, only: :message
